@@ -45,6 +45,7 @@ code, .font-mono {
 }
 
 @layer base {
+    html { scroll-behavior: smooth; }
     * { @apply border-border; }
     body { @apply text-ink; }
 
