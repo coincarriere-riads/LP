@@ -1,0 +1,36 @@
+{
+  "summary": "Full E2E test for CoinCarrière landing + FastAPI lead capture. Backend: 9/9 pytest pass. Frontend: all 11 sections present, all CTAs link to external signup with target=_blank, hero compass + 8-bar market chart render correctly, lead form validation + 201 POST success, mobile nav-toggle + panel + stacked hero layout verified at 375x812.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "Whole landing", "issues": ["Tailwind class 'scroll-smooth' is applied on the inner <div data-testid=landing-root> rather than the <html> element. As a result, scroll-behavior on document.documentElement remains 'auto' and native smooth scroll on hash links may not apply in all browsers. Anchor navigation still works (verified) but jumps instantly. Recommend moving 'scroll-smooth' class to <html> via index.html or using CSS html { scroll-behavior: smooth }."]}
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_coincarriere_api.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "(Optional polish) Apply 'scroll-smooth' to <html> so anchor navigation in the nav animates smoothly."
+  ],
+  "critical_code_review_comments": [
+    "server.py uses deprecated FastAPI @app.on_event('shutdown') hook — consider migrating to lifespan context manager (non-blocking, future-proof).",
+    "Lead validation only enforces Pydantic checks; no rate-limiting / spam protection on POST /api/leads. Consider adding a simple per-IP throttle or honeypot field before launch.",
+    "No GET endpoint to fetch a single lead and no DELETE — acceptable for MVP lead capture but worth flagging.",
+    "Frontend FinalCTA uses axios but rest of app doesn't need axios elsewhere — consider standardizing on fetch to keep bundle slim (very minor)."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_coincarriere_api.py (new)"
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "seed_data_creation": "Test leads inserted into MongoDB recruiter_leads collection with TEST_ prefix on full_name and unique random emails. Status checks also seeded with TEST_<uuid> names.",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Backend test file at /app/backend/tests/test_coincarriere_api.py covers root, status (legacy), leads (create full/minimal/validation errors/list-sorted-desc), and sectors stats. Public URL from REACT_APP_BACKEND_URL. All endpoints currently green. Frontend has comprehensive data-testid coverage (kebab-case) so Playwright selectors are stable: landing-root, site-nav, hero-section, hero-cta-primary, nav-cta-publish, nav-toggle-mobile, nav-mobile-panel, hero-compass, hero-dashboard, data-section, market-chart, bar-row-0..7, final-cta-section, final-cta-primary, lead-form, lead-field-name/email/phone/riad/city/need, lead-submit, lead-success, lead-error, site-footer. External signup URL https://coincarriere.com/register?type=company is constant across hero, nav, mobile-nav, final CTA.",
+  "rca of the issue": "N/A — no issues found."
+}
