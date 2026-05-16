@@ -32,7 +32,7 @@ function Landing() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <<BrowserRouter basename={process.env.PUBLIC_URL || "/app"}>>
       <Routes>
         <Route path="/" element={<Landing />} />
       </Routes>
