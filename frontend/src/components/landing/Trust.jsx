@@ -11,7 +11,7 @@ export default function Trust() {
   return (
     <section
       data-testid="trust-section"
-      className="relative py-24 sm:py-28"
+      className="relative py-16 sm:py-20"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">

@@ -29,7 +29,7 @@ export default function Problem() {
     <section
       id="realite"
       data-testid="problem-section"
-      className="relative py-24 sm:py-32 bg-cream/40 cc-grain overflow-hidden"
+      className="relative py-16 sm:py-24 bg-cream/40 cc-grain overflow-hidden"
     >
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-soft-bg via-cream/60 to-soft-bg" />
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
@@ -52,7 +52,7 @@ export default function Problem() {
           </Reveal>
         </div>
 
-        <div className="mt-14 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="mt-12 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {CARDS.map((c, i) => (
             <Reveal key={c.title} delay={i * 80}>
               <article

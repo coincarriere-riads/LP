@@ -25,11 +25,15 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="#top" data-testid="nav-logo" className="flex items-center gap-2.5 group">
-          <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-xl bg-cc-navy overflow-hidden">
-            <span className="absolute inset-0 bg-gradient-to-br from-cc-cyan/40 to-transparent" />
-            <span className="relative font-display font-bold text-cc-lime text-sm leading-none">cc</span>
+          <span className="inline-flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl overflow-hidden bg-ink ring-1 ring-cc-mid-blue/15">
+            <img
+              src="/brand/coincarriere-logo.png"
+              alt="CoinCarrière"
+              className="h-full w-full object-contain scale-110"
+              draggable={false}
+            />
           </span>
-          <span className="font-display font-semibold text-ink tracking-tight text-[17px]">
+          <span className="font-display font-semibold text-ink tracking-tight text-[17px] hidden sm:inline">
             CoinCarrière
           </span>
         </a>

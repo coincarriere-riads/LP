@@ -44,7 +44,7 @@ export default function HowItWorks() {
     <section
       id="methode"
       data-testid="how-section"
-      className="relative py-24 sm:py-32 bg-ink text-white overflow-hidden"
+      className="relative py-16 sm:py-24 bg-ink text-white overflow-hidden"
     >
       <div className="absolute inset-0 -z-0 bg-grid-soft [background-size:48px_48px] opacity-[0.06]" />
       <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-cc-cyan/15 blur-[120px]" />
@@ -65,7 +65,7 @@ export default function HowItWorks() {
           </Reveal>
         </div>
 
-        <div ref={ref} className="mt-14 sm:mt-20 relative">
+        <div ref={ref} className="mt-12 sm:mt-16 relative">
           {/* Connecting animated line */}
           <div className="hidden lg:block absolute top-[58px] left-[8%] right-[8%]">
             <div className={`step-line ${visible ? "is-visible" : ""}`} />

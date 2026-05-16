@@ -244,7 +244,7 @@ export default function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative pt-28 sm:pt-32 pb-20 sm:pb-28 overflow-hidden"
+      className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 overflow-hidden"
     >
       {/* Background composition */}
       <div className="absolute inset-0 -z-10">

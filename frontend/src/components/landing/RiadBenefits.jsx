@@ -40,7 +40,7 @@ export default function RiadBenefits() {
   return (
     <section
       data-testid="benefits-section"
-      className="relative py-24 sm:py-32 bg-cream/30"
+      className="relative py-16 sm:py-24 bg-cream/30"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="max-w-3xl">
@@ -62,7 +62,7 @@ export default function RiadBenefits() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid sm:grid-cols-3 gap-4 sm:gap-5">
+        <div className="mt-12 grid sm:grid-cols-3 gap-4 sm:gap-5">
           {ITEMS.map((it, i) => (
             <Reveal key={it.title} delay={i * 70} className={it.span || ""}>
               <article

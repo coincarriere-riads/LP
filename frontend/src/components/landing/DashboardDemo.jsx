@@ -52,7 +52,7 @@ export default function DashboardDemo() {
     <section
       id="demo"
       data-testid="demo-section"
-      className="relative py-24 sm:py-32 bg-soft-bg overflow-hidden"
+      className="relative py-16 sm:py-24 bg-soft-bg overflow-hidden"
     >
       <div className="absolute -top-20 -left-20 h-[420px] w-[420px] rounded-full bg-cc-cyan/10 blur-3xl" />
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative">
@@ -87,7 +87,7 @@ export default function DashboardDemo() {
         <Reveal delay={220}>
           <div
             data-testid="demo-dashboard"
-            className="mt-14 rounded-3xl bg-white border border-cc-mid-blue/12 cc-shadow-soft overflow-hidden"
+            className="mt-10 sm:mt-12 rounded-3xl bg-white border border-cc-mid-blue/12 cc-shadow-soft overflow-hidden"
           >
             {/* Browser frame */}
             <div className="flex items-center justify-between bg-soft-bg/80 border-b border-cc-mid-blue/10 px-4 sm:px-5 py-3">

@@ -46,7 +46,7 @@ export default function Features() {
     <section
       id="fonctionnalites"
       data-testid="features-section"
-      className="relative py-24 sm:py-32"
+      className="relative py-16 sm:py-24"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="max-w-3xl">
@@ -62,7 +62,7 @@ export default function Features() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {FEATURES.map((f, i) => (
             <Reveal key={f.title} delay={i * 60}>
               <article
