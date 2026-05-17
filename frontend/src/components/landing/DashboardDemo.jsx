@@ -110,10 +110,12 @@ export default function DashboardDemo() {
               {/* Sidebar */}
               <aside className="hidden lg:block border-r border-cc-mid-blue/10 bg-soft-bg/40 p-5">
                 <div className="flex items-center gap-2 px-2 py-2">
-                  <span className="h-7 w-7 rounded-lg bg-cc-navy text-cc-lime font-bold font-display text-xs flex items-center justify-center">
-                    cc
-                  </span>
-                  <span className="font-display font-semibold text-cc-navy text-sm">CoinCarrière</span>
+                 <img
+  src={`${process.env.PUBLIC_URL}/brand/coincarriere-logo.png`}
+  alt="CoinCarrière"
+  className="h-8 w-auto object-contain select-none"
+  draggable={false}
+/>
                 </div>
                 <nav className="mt-6 space-y-1">
                   {[
