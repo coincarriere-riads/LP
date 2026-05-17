@@ -7,7 +7,7 @@ export default function Footer() {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
         <img
-          src="/brand/coincarriere-logo.png"
+          src={`${process.env.PUBLIC_URL}/brand/coincarriere-logo.png`}
           alt="CoinCarrière"
           className="h-9 w-auto object-contain select-none"
           draggable={false}
